@@ -1,0 +1,61 @@
+﻿<Window x:Class="DAY1.BasketWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DAY1"
+        mc:Ignorable="d"
+        Title="Корзина товаров" Height="450" Width="800" MinWidth="600" MinHeight="350">
+
+    <Grid Margin="10">
+        <!-- Разделяем окно на две строки: верхняя для таблицы, нижняя для панели управления -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <!-- Таблица занимает всё свободное место -->
+            <RowDefinition Height="Auto" />
+            <!-- Нижняя панель подстраивается под высоту контента -->
+        </Grid.RowDefinitions>
+
+        <!-- ТАБЛИЦА ТОВАРОВ (Строка 0) -->
+        <DataGrid x:Name="dgProducts" Grid.Row="0" AutoGenerateColumns="False" SelectionChanged="dgProducts_SelectionChanged" Margin="0,0,0,15">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Фото" Width="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding PRODUCT.PHOTO, TargetNullValue='pack://application:,,,/Resources/stub.png'}" 
+                                   Width="60" Height="60" 
+                                   Stretch="UniformToFill"/>
+                            </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Название товара" Binding="{Binding PRODUCT.NAME_PRODUCT}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Цена" Binding="{Binding PRODUCT.PRICE}" Width="auto"></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Количество" Binding="{Binding COUNT}" Width="auto"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- НИЖНЯЯ ПАНЕЛЬ С УПРАВЛЕНИЕМ (Строка 1) -->
+        <!-- Разделяем панель на две колонки: левая для цены и кнопок +/-, правая для кнопки Купить -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <!-- Элементы слева -->
+                <ColumnDefinition Width="Auto" />
+                <!-- Кнопка купить справа -->
+            </Grid.ColumnDefinitions>
+
+            <!-- ЛЕВАЯ ЧАСТЬ: Цена и кнопки управления количеством -->
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                <Label Content="Стоимость: " FontSize="14" FontWeight="SemiBold"/>
+                <Label x:Name="lblPrice" Content="0" FontSize="14" FontWeight="Bold" Margin="0,0,20,0" Width="100"/>
+
+                <!-- Кнопки изменения количества -->
+                <Button Content="-" Width="40" Height="30" Margin="0,0,10,0" Click="Button_Click_1" FontSize="14" FontWeight="Bold"/>
+                <Button Content="+" Width="40" Height="30" IsEnabled="True" Click="Button_Click" FontSize="14" FontWeight="Bold"/>
+            </StackPanel>
+
+            <!-- ПРАВАЯ ЧАСТЬ: Кнопка "Купить" -->
+            <Button Grid.Column="1" Content="Купить" Width="150" Height="35" Click="Button_Click_2" FontSize="14" FontWeight="Bold" Background="#FF4CAF50" Foreground="White"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fe1a3d082b9240f39d015cfd44b4e8bb" Name="Diagram1">
+        <EntityTypeShape EntityType="Kabinet2Model.ACCESS_RIGHTS" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kabinet2Model.ADDRESS" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kabinet2Model.BASKET" Width="1.5" PointX="8.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kabinet2Model.CATEGORY_PRODUCT" Width="1.5" PointX="3.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kabinet2Model.CLIENT" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kabinet2Model.EMPLOYEE" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kabinet2Model.HISTORY" Width="1.5" PointX="5.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kabinet2Model.ORDERS" Width="1.5" PointX="5.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kabinet2Model.POST" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kabinet2Model.PRODUCT" Width="1.5" PointX="6" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kabinet2Model.PRODUCT_IN_ORDER" Width="1.5" PointX="7.5" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Kabinet2Model.SUBDVISION" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="Kabinet2Model.FK__CLIENT__FK_LOGIN__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="Kabinet2Model.FK__EMPLOYEE__FK_LOG__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="Kabinet2Model.FK__ADDRESS__FK_CLIE__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="Kabinet2Model.FK__BASKET__FK_CLIEN__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="Kabinet2Model.FK__BASKET__FK_PRODU__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="Kabinet2Model.FK__PRODUCT__FK_CATE__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="Kabinet2Model.FK__ORDERS__FK_CLIEN__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="Kabinet2Model.FK__EMPLOYEE__FK_POS__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="Kabinet2Model.FK__EMPLOYEE__FK_SUB__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="Kabinet2Model.FK__HISTORY__FK_EMPL__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="Kabinet2Model.FK__PRODUCT_I__FK_OR__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="Kabinet2Model.FK__PRODUCT_I__FK_PR__5629CD9C" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

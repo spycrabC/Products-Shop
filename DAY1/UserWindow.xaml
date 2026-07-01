@@ -1,0 +1,85 @@
+﻿<Window x:Class="DAY1.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DAY1"
+        mc:Ignorable="d"
+        Title="Личный кабинет" Height="450" Width="800" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+
+
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+           
+            <ColumnDefinition Width="200"/>
+            
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        
+        <StackPanel Grid.Column="0" Margin="0,0,15,0">
+
+            <GroupBox Header="Ваше фото" Padding="10">
+
+                <Image x:Name="imageEmployee" Height="120" Width="146" Stretch="Uniform"/>
+            </GroupBox>
+
+
+            <Button x:Name="btnPhoto" Content="Выбрать фото" Margin="0,5,0,15" Click="btnPhoto_Click"/>
+
+
+            <TextBlock Text="Логин" Margin="0,5,0,2" FontWeight="Medium"/>
+            <TextBox x:Name="tbLogin" Height="25" VerticalContentAlignment="Center"/>
+
+            <TextBlock Text="Пароль" Margin="0,10,0,2" FontWeight="Medium"/>
+
+            <PasswordBox x:Name="tbPassword" Height="25" VerticalContentAlignment="Center"/>
+            
+        </StackPanel>
+
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Column="0" Grid.Row="0" Margin="5">
+                <TextBlock Text="Фамилия"/>
+                <TextBox x:Name="tbSurname" Height="25" VerticalContentAlignment="Center" Margin="0,3,0,10"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="0" Grid.Row="1" Margin="5">
+                <TextBlock Text="Имя"/>
+                <TextBox x:Name="tbName" Height="25" VerticalContentAlignment="Center" Margin="0,3,0,10"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="0" Grid.Row="2" Margin="5">
+                <TextBlock Text="Отчество"/>
+                <TextBox x:Name="tbPatronymic" Height="25" VerticalContentAlignment="Center" Margin="0,3,0,10"/>
+                <Button Content="Сохранить изменения" Click="Button_Click"/>
+            </StackPanel>
+
+           
+            <StackPanel Grid.Column="1" Grid.Row="0" Margin="5">
+                <TextBlock Text="Серия и номер паспорта"/>
+                <TextBox x:Name="tbSeriaNumber" Height="25" VerticalContentAlignment="Center" Margin="0,3,0,10"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Grid.Row="1" Margin="5">
+                <TextBlock Text="Номер телефона"/>
+                <TextBox x:Name="tbNumber" Height="25" VerticalContentAlignment="Center" Margin="0,3,0,10"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Grid.Row="2" Margin="5">
+                <TextBlock Text="Email"/>
+                <TextBox x:Name="tbEmail" Height="25" VerticalContentAlignment="Center" Margin="0,3,0,10"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
